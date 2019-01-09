@@ -68,8 +68,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::find($id);
-
-        return view('Products.update', compact('product'));
+        return view('Products.modificar', compact('product'));
     }
 
     /**
@@ -86,11 +85,16 @@ class ProductController extends Controller
             'Costo' => 'required',
             'PrecioVenta' => 'required',
         ]);
-
-        $product->update($request->all());
-
-        return redirect()->route('products.index')
-        ->with('success','Product updated successfully');
+        $id = $request->id;
+        $input = $request->all();
+        $product = Product::findOrFail($id);
+        $product->fill($input)->save();
+        $product->Producto = $request->Producto;
+        $product->Costo = $request->Costo;
+        $product->PrecioVenta = $request->PrecioVenta;
+        $product->save();
+        Session::flash('message','Producto Modificado Correctamente');
+        return redirect()->route('Product.index');
 
     }
 
@@ -100,8 +104,12 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->delete();
+        Session::flash('message','Producto Eliminado Correctamente');
+        return redirect()->route('Product.index');
+        //return view('Products.errores', compact('error'));
     }
 }

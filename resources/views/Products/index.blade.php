@@ -23,6 +23,7 @@
       <th scope="col">Producto</th>
       <th scope="col">Costo</th>
       <th scope="col">Precio de Venta</th>
+      <th scope="col">Accion</th>
     </tr>
   </thead>
   <tbody>
@@ -31,7 +32,7 @@
         <td>{{ $product->Producto}}</td>
         <td>$&nbsp; {{ $product->Costo}}</td>
         <td>$&nbsp; {{ $product->PrecioVenta}}</td>
-        <td><a class="btn btn-primary" href="{{ route('Product.edit', $product->id)}}">Modificar Producto</a></td>
+        <td><a href="{{ route('Product.edit', $product->id) }}">Modificar</a></td>
       </tr>
     @endforeach
   </tbody>

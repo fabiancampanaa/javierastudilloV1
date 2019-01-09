@@ -10,14 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::resource('Product', 'ProductController');
 Route::get('/', 'Auth\LoginController@showLoginForm');
 
 Route::get('inicio', 'InicioController@index')->name('inicio');
 
 Route::post('login', 'Auth\LoginController@login')->name('login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-
-Route::resource('Product', 'ProductController');
 
 
