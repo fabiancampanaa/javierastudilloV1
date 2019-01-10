@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.baseproducto')
 
-@section('content')
+@section('contentproduct')
 <h3 class="text-center">Agregar Producto</h3>
 <hr>
 <div class="container">

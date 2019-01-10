@@ -1,23 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.baseproducto')
 
-@section('content')
-<h4>Gestion de Productos</h4>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-      <a class="nav-link" href="{{ route('Product.create') }}">Crear Producto <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Modificar Producto</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+@section('contentproduct')
+<hr>
 @if (Session::has('message'))
 <div class="alert alert-info">{{ Session::get('message') }}</div>
 @endif
-<table class="table text-center">
+<table class="table table-sm text-center">
   <thead>
     <tr>
       <th scope="col">Producto</th>
@@ -32,7 +20,7 @@
         <td>{{ $product->Producto}}</td>
         <td>$&nbsp; {{ $product->Costo}}</td>
         <td>$&nbsp; {{ $product->PrecioVenta}}</td>
-        <td><a href="{{ route('Product.edit', $product->id) }}">Modificar</a></td>
+        <td><a href="{{ route('Product.edit', $product->id)}}" class="btn btn-primary btn-sm">Modificar</a></td>
       </tr>
     @endforeach
   </tbody>

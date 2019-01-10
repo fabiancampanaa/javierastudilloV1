@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.baseproducto')
 
-@section('content')
+@section('contentproduct')
 <h3 class="text-center">Modificar Producto</h3>
 <hr>    
 
@@ -27,22 +27,22 @@
                     <hr>
                     <div class="col-md-12 text-center">
                         <hr>
-                        <button type="submit" class="btn btn-primary btn-block">Modificar Producto</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Modificar Producto</button>
                     </div>
-                    <form action="{{ route('Product.destroy', $product->id)}}" method="POST">
-                            @method('DELETE')
-                            @csrf
-                            <input type="hidden" name="_method" value="DELETE">
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <input type="hidden" name="id" value="{{ $product->id}}" class="form-control">
-                            <div class="col-md-12 text-center">
-                                    <button type="submit" class="btn btn-danger btn-block">Eliminar Producto</button>
-                            </div> 
-                    </form>
-
             </div>
     </form>
+    <div class="col-md-12 text-center">
+            <form action="{{ route('Product.destroy', $product->id)}}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="hidden" name="id" value="{{ $product->id}}" class="form-control">
+                    <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-danger btn-sm">Eliminar Producto</button>
+                    </div> 
+            </form>
+    </div>
 </div>
-
-
+           
 @endsection
