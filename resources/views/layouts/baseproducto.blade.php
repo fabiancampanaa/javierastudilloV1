@@ -2,7 +2,16 @@
 
 
 <div class="container">
-    <h3>Gestion de Productos</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="/img/logo.jpg" width="60">
+            </div>
+            <div class="col-md-10">
+                <h4>Modulo de Gestion Producto</h4>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">

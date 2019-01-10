@@ -1,8 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-   <h3>Modulo de Gestion Banqueteria</h3>
-   Bienvenido {{ auth()->user()->name}} 
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+        <img src="/img/logo.jpg" width="60">
+    </div>
+    <div class="col-md-10">
+        <h4>Modulo de Gestion Banqueteria</h4>
+        Bienvenido {{ auth()->user()->name}}
+    </div>
+  </div>
+</div>
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
