@@ -19,15 +19,15 @@
           <a class="nav-link" href="{{ route('Product.index') }}">Gestion de Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Crear Cotizacion</a>
+          <a class="nav-link" href="{{ route('cotizacion.index')}}">Crear Cotizacion</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" href="#">Gestión de Menús</a>
           </li>
-          <li class="nav-item">
+          <li class="">
               <form action="{{ route ('logout') }}" method="POST">
                   {{ csrf_field() }}
-                  <button class="btn btn-danger btn-xs">Cerrar Sesion</button>
+                  <button class="btn btn-danger btn-xs float-right">Cerrar Sesion</button>
                </form>
           </li>
         </ul>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use App\cotizacion;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class CotizacionController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::orderBy('id', 'ASC')->paginate(20);
+        return view('Cotizacion.index', compact('products'));
     }
 
     /**

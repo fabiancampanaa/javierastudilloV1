@@ -11,6 +11,7 @@
 |
 */
 Route::resource('Product', 'ProductController');
+Route::resource('cotizacion', 'CotizacionController');
 Route::get('/', 'Auth\LoginController@showLoginForm');
 
 Route::get('inicio', 'InicioController@index')->name('inicio');

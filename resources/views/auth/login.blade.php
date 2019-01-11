@@ -5,7 +5,10 @@
     <div class="container col-md-6 .offset-md-3">
         <div class="card card-default">
             <div class="card-header">
-                <h1 class="panel-title">Bienvenido a Javiera Astudillo</h1>
+                <div class="row">
+                    <div class="col col-md-4 text-center"><img src="/img/logo.jpg" width="140"></div>
+                    <div class="col col-md-6"><h2 class="panel-title">Bienvenido a Javiera Astudillo</h2></div>
+                </div>               
             </div>
             <div class="card-body">
             <form action="{{ route('login') }}" method="POST">
