@@ -7,7 +7,7 @@
             <div class="col-md-2">
                 <img src="/img/logo.jpg" width="60">
             </div>
-            <div class="col-md-10">
+            <div class="col-md-10 my-auto">
                 <h4>Modulo de Gestion Producto</h4>
             </div>
         </div>

@@ -6,7 +6,7 @@
             <div class="col-md-2">
                 <img src="/img/logo.jpg" width="60">
             </div>
-            <div class="col-md-10">
+            <div class="col-md-10 my-auto">
                 <h3>Gestion cotizacion</h3>
             </div>
         </div>
