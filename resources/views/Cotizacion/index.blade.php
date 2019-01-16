@@ -40,6 +40,11 @@
                         <a href="javascript:llena({{$products->toJson()}})" class="btn btn-outline-success btn-sm" id="masproducto">+</a>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-primary" id="btncalcular">Calcular</button>
+                    </div>
+                </div>
             </div>
             <div class="col-md-8">
                 <div class="container">
@@ -47,8 +52,8 @@
                         <table class="table" id="tablacot">
                             <thead>     
                                 <tr>
-                                    <td colspan="1">Sr(a).: </td>
-                                    <td colspan="3" id="nombrecliente">....</td>
+                                    <th colspan="1">Sr(a).: </th>
+                                    <th colspan="3" id="nombrecliente">....</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,9 +65,7 @@
                                 </tr>
                                 <tr>
                             </tbody>
-
                         </table>
-                        <button class="btn btn-primary" id="btncalcular">Calcular</button>
                     </div>
                 </div>
             </div>

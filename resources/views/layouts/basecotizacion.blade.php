@@ -20,4 +20,6 @@
             </nav>
     </div>
 </div>
+
+
 @yield('contentcotizacion')
